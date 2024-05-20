@@ -4,9 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server -c build/webpack.dev.js",
-    "build": "webpack -c build/webpack.prod.js"
-},
+    "dev:dev": "cross-env NODE_ENV=development BASE_ENV=development webpack-dev-server -c build/webpack.dev.js",
+    "dev:test": "cross-env NODE_ENV=development BASE_ENV=test webpack-dev-server -c build/webpack.dev.js",
+    "dev:pre": "cross-env NODE_ENV=development BASE_ENV=pre webpack-dev-server -c build/webpack.dev.js",
+    "dev:prod": "cross-env NODE_ENV=development BASE_ENV=production webpack-dev-server -c build/webpack.dev.js",
+    "build:dev": "cross-env NODE_ENV=production BASE_ENV=development webpack -c build/webpack.prod.js",
+    "build:test": "cross-env NODE_ENV=production BASE_ENV=test webpack -c build/webpack.prod.js",
+    "build:pre": "cross-env NODE_ENV=production BASE_ENV=pre webpack -c build/webpack.prod.js",
+    "build:prod": "cross-env NODE_ENV=production BASE_ENV=production webpack -c build/webpack.prod.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,6 +23,7 @@
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
     "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.73.0",
     "webpack-cli": "^4.9.2",
