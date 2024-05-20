@@ -2,7 +2,19 @@
 import React, { useState } from "react";
 
 function App() {
-  const [val, setVal] = useState(123333);
-  return <h2>webpack5-react-ts{val}</h2>;
+  const [val, setVal] = useState<string | undefined>(undefined);
+  return (
+    <>
+      <h2>webpack5-react-ts</h2>
+      <p>{val}</p>
+      <input
+        type="text"
+        value={val}
+        onChange={(e) => {
+          setVal(e.target.value);
+        }}
+      />
+    </>
+  );
 }
 export default App;

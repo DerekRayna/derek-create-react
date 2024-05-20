@@ -1,4 +1,4 @@
-// webpack.dev.js
+// 开发环境配置
 const path = require("path");
 const { merge } = require("webpack-merge");
 const baseConfig = require("./webpack.base.js");
