@@ -1,5 +1,7 @@
 // react根组件
 import React, { useState } from "react";
+import "./app.css";
+import "./app.less";
 
 function App() {
   const [val, setVal] = useState<string | undefined>(undefined);

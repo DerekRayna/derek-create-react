@@ -27,6 +27,10 @@ module.exports = {
           },
         },
       },
+      {
+        test: /.(css|less)$/, //匹配 css和less 文件
+        use: ["style-loader", "css-loader", "less-loader"],
+      },
     ],
   },
   resolve: {
