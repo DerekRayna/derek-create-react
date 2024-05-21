@@ -18,14 +18,8 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /.(ts|tsx)$/, // 匹配.ts, tsx文件
-        use: {
-          loader: "babel-loader",
-          options: {
-            // 预设执行顺序由右往左,所以先处理ts,再处理jsx
-            presets: ["@babel/preset-react", "@babel/preset-typescript"],
-          },
-        },
+        test: /.(ts|tsx)$/,
+        use: "babel-loader",
       },
       {
         test: /.(css|less)$/, //匹配 css和less 文件
