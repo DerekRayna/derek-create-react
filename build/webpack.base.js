@@ -25,6 +25,18 @@ module.exports = {
         test: /.(css|less)$/, //匹配 css和less 文件
         use: ["style-loader", "css-loader", "postcss-loader", "less-loader"],
       },
+      {
+        test: /.(png|jpg|jpeg|gif|svg)$/, // 匹配图片文件
+        type: "asset", // type选择asset
+        parser: {
+          dataUrlCondition: {
+            maxSize: 10 * 1024, // 小于10kb转base64位
+          },
+        },
+        generator: {
+          filename: "static/images/[name][ext]", // 文件输出目录和命名
+        },
+      },
     ],
   },
   resolve: {
