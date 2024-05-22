@@ -11,7 +11,7 @@ function App() {
   return (
     <>
       <DcClass></DcClass>
-      <h2>webpack5-react-ts</h2>
+      <h2>webpack5-react-ts hello</h2>
       <p>{val}</p>
       <input
         type="text"

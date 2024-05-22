@@ -1,6 +1,7 @@
 // 公共配置
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const webpack = require("webpack");
 
 console.log("NODE_ENV", process.env.NODE_ENV);
@@ -73,6 +74,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       "process.env.BASE_ENV": JSON.stringify(process.env.BASE_ENV),
-    }),
+    }), // 环境变量注入浏览器端代码
+    new ReactRefreshWebpackPlugin(), // 添加热更新插件
   ],
 };
