@@ -67,6 +67,9 @@ module.exports = {
   resolve: {
     extensions: [".js", ".tsx", ".ts"],
   },
+  cache: {
+    type: "filesystem", // 使用文件缓存
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "../public/index.html"), // 模板取定义root节点的模板
