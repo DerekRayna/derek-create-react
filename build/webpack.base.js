@@ -76,6 +76,7 @@ module.exports = {
     alias: {
       "@": path.join(__dirname, "../src"),
     },
+    modules: [path.resolve(__dirname, "../node_modules")],
   },
   cache: {
     type: "filesystem", // 使用文件缓存
