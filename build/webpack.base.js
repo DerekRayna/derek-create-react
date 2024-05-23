@@ -20,7 +20,7 @@ module.exports = {
     rules: [
       {
         test: /.(ts|tsx)$/,
-        use: "babel-loader",
+        use: ["thread-loader", "babel-loader"],
       },
       {
         test: /.(css|less)$/, //匹配 css和less 文件
@@ -66,6 +66,9 @@ module.exports = {
   },
   resolve: {
     extensions: [".js", ".tsx", ".ts"],
+    alias: {
+      "@": path.join(__dirname, "../src"),
+    },
   },
   cache: {
     type: "filesystem", // 使用文件缓存

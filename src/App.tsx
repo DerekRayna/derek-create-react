@@ -1,10 +1,10 @@
 // react根组件
 import React, { useState } from "react";
-import smallImg from "./assets/imgs/5kb.png";
-import bigImg from "./assets/imgs/22kb.png";
-import "./app.css";
-import "./app.less";
-import DcClass from "./components/Class";
+import smallImg from "@/assets/imgs/5kb.png";
+import bigImg from "@/assets/imgs/22kb.png";
+import "@/app.css";
+import "@/app.less";
+import DcClass from "@/components/Class";
 
 function App() {
   const [val, setVal] = useState<string | undefined>(undefined);
