@@ -19,11 +19,18 @@ module.exports = {
   module: {
     rules: [
       {
+        include: [path.resolve(__dirname, "../src")], // 只对项目src文件的ts,tsx进行loader解析
         test: /.(ts|tsx)$/,
         use: ["thread-loader", "babel-loader"],
       },
       {
-        test: /.(css|less)$/, //匹配 css和less 文件
+        test: /\.css$/, //匹配所有的 css 文件
+        include: [path.resolve(__dirname, "../src")],
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
+      {
+        test: /\.less$/, //匹配所有的 less 文件
+        include: [path.resolve(__dirname, "../src")],
         use: ["style-loader", "css-loader", "postcss-loader", "less-loader"],
       },
       {
