@@ -1,6 +1,7 @@
 // 生产环境配置
 const { merge } = require("webpack-merge");
 const CopyPlugin = require("copy-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 const baseConfig = require("./webpack.base.js");
@@ -20,5 +21,13 @@ module.exports = merge(baseConfig, {
         },
       ],
     }),
+    new MiniCssExtractPlugin({
+      filename: "static/css/[name].css", // 抽离css的输出目录和名称
+    }),
   ],
+  optimization: {
+    minimizer: [
+      new CssMinimizerPlugin(), // 压缩css
+    ],
+  },
 });
