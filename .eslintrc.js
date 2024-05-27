@@ -22,11 +22,16 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true
+    },
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
   plugins: ['@typescript-eslint', 'react'],
-  rules: {},
+  rules: {
+    '@typescript-eslint/no-non-null-assertion': 'off'
+  },
   settings: {
     react: {
       version: 'detect'

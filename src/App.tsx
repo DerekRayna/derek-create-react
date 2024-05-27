@@ -4,11 +4,14 @@ import smallImg from '@/assets/imgs/5kb.png'
 import bigImg from '@/assets/imgs/22kb.png'
 import '@/app.css'
 import '@/app.less'
+import PreviewFile from './components/PreviewFile'
 
 function App() {
   const [val, setVal] = useState<string | undefined>(undefined)
+
   return (
     <>
+      <PreviewFile />
       <h2>webpack5-react-ts hello</h2>
       <p>{val}</p>
       <input
