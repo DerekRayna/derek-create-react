@@ -22,6 +22,11 @@
       "npm run eslint"
     ]
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -31,6 +36,8 @@
     "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.17.12",
     "@babel/preset-typescript": "^7.17.12",
+    "@commitlint/cli": "^17.0.1",
+    "@commitlint/config-conventional": "^17.0.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.7",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
@@ -44,6 +51,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.0.0",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.16.0",
     "eslint-plugin-react": "^7.34.1",
     "html-webpack-plugin": "^5.5.0",
