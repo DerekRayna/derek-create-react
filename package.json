@@ -22,6 +22,11 @@
       "npm run eslint"
     ]
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -46,6 +51,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.0.0",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.16.0",
     "eslint-plugin-react": "^7.34.1",
     "html-webpack-plugin": "^5.5.0",
